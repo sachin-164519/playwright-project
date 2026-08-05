@@ -13,6 +13,7 @@ test('Validate youtube title', async({page})=>{
     await page.waitForTimeout(5000);
     //Click on playlist
     await page.getByRole('link', { name: 'Cypress by Testers Talk☑️' }).click();
+    await page.waitForTimeout(5000);
     //Vlaidate title
     await expect(page).toHaveTitle('Cypress Tutorial Full Course | Cypress Automation | Learn Cypress in 5 Hrs - YouTube');
 })
